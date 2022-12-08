@@ -149,11 +149,13 @@ All tests should pass - indicating your platform is fully supported and you are 
 
 You can download and install GSL using the [vcpkg](https://github.com/Microsoft/vcpkg) dependency manager:
 
+windows:
+
     git clone https://github.com/Microsoft/vcpkg.git
     cd vcpkg
     ./bootstrap-vcpkg.sh
-    ./vcpkg integrate install
-    vcpkg install ms-gsl
+    ./vcpkg.exe integrate install 将vcpkg下载安装的库文件路径包含进本地的VS中，方便VS使用
+    ./vcpkg.exe install ms-gsl ms-gsl:x64-windows  同时安装32位和64位的库
 
 The GSL port in vcpkg is kept up to date by Microsoft team members and community contributors. If the version is out of date, please [create an issue or pull request](https://github.com/Microsoft/vcpkg) on the vcpkg repository.
 
